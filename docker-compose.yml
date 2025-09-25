@@ -19,15 +19,15 @@ services:
       - npm-letsencrypt:/etc/letsencrypt
     networks:
       - proxy
-  duckdns-updater:
-    image: linuxserver/duckdns
-    container_name: duckdns-updater
-    restart: unless-stopped
-    env_file:
-      - ./duckdns-updater/.env
-    volumes:
-      - duckdns-data:/config
-    networks:
+  #duckdns-updater:
+    #image: linuxserver/duckdns
+    #container_name: duckdns-updater
+    #restart: unless-stopped
+    #env_file:
+      #- ./duckdns-updater/.env
+    #volumes:
+      #- duckdns-data:/config
+    #networks:
       #- proxy
   mediaflow_proxy:
     build: https://github.com/nzo66/mediaflow-proxy.git
